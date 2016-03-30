@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+
+  <node name="motoman_grippers" pkg="motoman_grippers" type="motoman_grippers" output="screen"/>
+
+</launch>

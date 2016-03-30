@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<launch>
+  <node name="schunk_ezn64" pkg="schunk_ezn64" type="schunk_ezn64" output="screen" >
+    <rosparam>
+      vendor_id: 7358
+      product_id: 371
+      gripper_id: 10
+    </rosparam>
+  </node>
+
+  <node name="schunk_pg70" pkg="schunk_pg70" type="schunk_pg70" output="screen" >
+    <rosparam>
+      gripper_id: 12
+      portname: /dev/ttyUSB0
+      baudrate: 9600
+    </rosparam>
+  </node>
+
+  <node name="motoman_grippers" pkg="motoman_grippers" type="motoman_grippers" output="screen"/>
+
+</launch>
+

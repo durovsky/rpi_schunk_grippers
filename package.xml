@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>motoman_grippers</name>
+  <version>1.0.0</version>
+  <description>Package to convert digital signals from robot controller to USB and Serial control commands for schunk grippers </description>
+
+  <maintainer email="durovsky987@gmail.com">pi</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+
+</package>
