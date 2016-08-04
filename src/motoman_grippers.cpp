@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
   if(GPIODirection(DIG_INPUT_1, IN) == -1) gpio_init_retval++;
   if(GPIODirection(DIG_INPUT_2, IN) == -1) gpio_init_retval++;
 
-  //Exit if GPIO initialization failed, retry one more time
+  //If GPIO initialization failed, retry one more time
   if(gpio_init_retval != 0)
   {
     ros::Duration(5).sleep();
@@ -90,7 +90,8 @@ int main(int argc, char *argv[])
     if(GPIODirection(DIG_INPUT_1, IN) == -1) gpio_init_retval++;
     if(GPIODirection(DIG_INPUT_2, IN) == -1) gpio_init_retval++;
   }
-
+  
+  // If second attempt failed, exit
   if(gpio_init_retval != 0)
   {
     ROS_ERROR("GPIO: Not able to initialize pins: %d", gpio_init_retval);
